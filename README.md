@@ -4,7 +4,8 @@
 
 ## Автор
 
-Гостеева Виктория
+Гостеева Виктория Максимовна
+
 
 ## Описание проекта
 
@@ -24,7 +25,7 @@ RunTrack API — это REST-сервис на FastAPI, который позв�
 
 Установка и запуск
 
-1. Клонирование репозитория
+### 1. Клонирование репозитория
 
 git clone https://github.com/victoriag4/runtrack-api.git
 cd runtrack-api
@@ -36,22 +37,22 @@ python -m venv .venv
 .venv\Scripts\activate   # Windows
 source .venv/bin/activate # macOS/Linux
 
-3. Установка зависимостей
+### 3. Установка зависимостей
 
 pip install -r requirements.txt
 
-4. Настройка переменных окружения
+### 4. Настройка переменных окружения
 
 DATABASE_URL=sqlite:///./runtrack.db
 SECRET_KEY=your-secret-key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=1440
 
-5. Запуск сервера
+### 5. Запуск сервера
 
 fastapi dev app/main.py
 
-6. Документация
+### 6. Документация
 
 Swagger UI: http://localhost:8000/docs
 
