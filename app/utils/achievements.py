@@ -9,33 +9,33 @@ from typing import Dict, Any, List
 # Список всех возможных достижений
 ACHIEVEMENTS = {
     "first_workout": {
-        "name": "🏃 Первый шаг",
+        "name": " Первый шаг",
         "description": "Добавлена первая тренировка",
-        "icon": "🏃",
+        "icon": "",
         "condition": lambda stats: stats["total_workouts"] >= 1
     },
     "ten_km": {
-        "name": "⭐ 10 км",
+        "name": " 10 км",
         "description": "Суммарный километраж превысил 10 км",
-        "icon": "⭐",
+        "icon": "",
         "condition": lambda stats: stats["total_km"] >= 10
     },
     "fifty_km": {
-        "name": "⭐⭐ 50 км",
+        "name": " 50 км",
         "description": "Суммарный километраж превысил 50 км",
-        "icon": "⭐⭐",
+        "icon": "⭐",
         "condition": lambda stats: stats["total_km"] >= 50
     },
     "hundred_km": {
-        "name": "🏆 100 км",
+        "name": " 100 км",
         "description": "Суммарный километраж превысил 100 км! Вы настоящий бегун!",
-        "icon": "🏆",
+        "icon": "",
         "condition": lambda stats: stats["total_km"] >= 100
     },
     "marathon": {
-        "name": "🔥 Марафонец",
+        "name": " Марафонец",
         "description": "Одна тренировка длиннее 42 км",
-        "icon": "🔥",
+        "icon": "",
         "condition": lambda stats: stats["max_distance"] >= 42.2
     },
     "sprinter": {
@@ -45,27 +45,27 @@ ACHIEVEMENTS = {
         "condition": lambda stats: stats["best_pace"] is not None and stats["best_pace"] < 240
     },
     "early_bird": {
-        "name": "🌅 Ранняя пташка",
+        "name": " Ранняя пташка",
         "description": "Тренировка до 7 утра",
-        "icon": "🌅",
+        "icon": "",
         "condition": lambda stats: stats["has_early_workout"]
     },
     "consistent": {
-        "name": "📅 Упорный",
+        "name": " Упорный",
         "description": "Тренировки 5 дней подряд",
-        "icon": "📅",
+        "icon": "",
         "condition": lambda stats: stats["max_streak"] >= 5
     },
     "speedster": {
-        "name": "🚀 Скорость",
+        "name": " Скорость",
         "description": "Лучший темп быстрее 5 мин/км (300 сек/км)",
-        "icon": "🚀",
+        "icon": "",
         "condition": lambda stats: stats["best_pace"] is not None and stats["best_pace"] < 300
     },
     "dedicated": {
-        "name": "💪 Преданный",
+        "name": " Преданный",
         "description": "Более 20 тренировок",
-        "icon": "💪",
+        "icon": " ",
         "condition": lambda stats: stats["total_workouts"] >= 20
     }
 }

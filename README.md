@@ -28,7 +28,7 @@ RunTrack API — это REST-сервис на FastAPI, который позв�
 ```bash
 git clone https://github.com/victoriag4/runtrack-api.git
 cd runtrack-api
-
+ 
 ### 2. Создание виртуального окружения
 
 
