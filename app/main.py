@@ -1,29 +1,26 @@
-"""
-RunTrack API - приложение для бегунов
-FastAPI приложение с аутентификацией, тренировками и рейтингом
-"""
-
 from fastapi import FastAPI
+from app.database import engine, Base
+from app.routers import auth, runs, rating
 
+# Создаём таблицы в базе данных
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="RunTrack API",
-    description="Сервис для отслеживания тренировок бегунов, рейтинга и заданий от тренера",
-    version="1.0.0",
-    contact={
-        "name": "Студент",
-        "email": "student@example.com",
-    },
+    description="Сервис для отслеживания тренировок бегунов",
+    version="1.0.0"
 )
 
-# Корневой эндпоинт для проверки работоспособности
+# Подключаем роутеры
+app.include_router(auth.router)
+app.include_router(runs.router)
+app.include_router(rating.router)
+
+
 @app.get("/")
-async def root():
-    """Проверка, что сервер работает"""
+def root():
     return {"message": "Welcome to RunTrack API!", "status": "running"}
 
-# Эндпоинт для проверки здоровья сервиса
 @app.get("/health")
-async def health_check():
-    """Проверка состояния сервера"""
+def health_check():
     return {"status": "healthy"}

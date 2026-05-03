@@ -1,0 +1,58 @@
+************* Module app.config
+app\config.py:12:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module app.database
+app\database.py:33:0: C0304: Final newline missing (missing-final-newline)
+app\database.py:16:0: C0103: Constant name "SessionLocal" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module app.main
+app\main.py:26:0: C0304: Final newline missing (missing-final-newline)
+app\main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\main.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
+app\main.py:25:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module app.models
+app\models.py:96:0: C0304: Final newline missing (missing-final-newline)
+app\models.py:11:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\models.py:38:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\models.py:57:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\models.py:75:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module app.routers.auth
+app\routers\auth.py:106:0: C0304: Final newline missing (missing-final-newline)
+************* Module app.routers.rating
+app\routers\rating.py:202:0: C0304: Final newline missing (missing-final-newline)
+app\routers\rating.py:57:0: R0914: Too many local variables (26/15) (too-many-locals)
+app\routers\rating.py:74:8: E1102: func.count is not callable (not-callable)
+************* Module app.routers.runs
+app\routers\runs.py:155:0: C0304: Final newline missing (missing-final-newline)
+app\routers\runs.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\routers\runs.py:134:0: R1711: Useless return at end of function or method (useless-return)
+app\routers\runs.py:3:0: C0411: standard import "typing.List" should be placed before third party imports "fastapi.APIRouter", "sqlalchemy.orm.Session" (wrong-import-order)
+************* Module app.schemas.rating
+app\schemas\rating.py:37:0: C0304: Final newline missing (missing-final-newline)
+app\schemas\rating.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\schemas\rating.py:2:0: C0411: standard import "typing.List" should be placed before third party import "pydantic.BaseModel" (wrong-import-order)
+app\schemas\rating.py:3:0: C0411: standard import "datetime.date" should be placed before third party import "pydantic.BaseModel" (wrong-import-order)
+app\schemas\rating.py:3:0: W0611: Unused date imported from datetime (unused-import)
+************* Module app.schemas.running
+app\schemas\running.py:34:0: C0304: Final newline missing (missing-final-newline)
+app\schemas\running.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\schemas\running.py:33:4: C0115: Missing class docstring (missing-class-docstring)
+app\schemas\running.py:33:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+app\schemas\running.py:2:0: C0411: standard import "typing.Optional" should be placed before third party import "pydantic.BaseModel" (wrong-import-order)
+app\schemas\running.py:3:0: C0411: standard import "datetime.date" should be placed before third party import "pydantic.BaseModel" (wrong-import-order)
+************* Module app.schemas.user
+app\schemas\user.py:44:0: C0304: Final newline missing (missing-final-newline)
+app\schemas\user.py:31:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module app.utils.achievements
+app\utils\achievements.py:137:0: C0304: Final newline missing (missing-final-newline)
+app\utils\achievements.py:6:0: C0411: standard import "typing.Dict" should be placed before third party import "sqlalchemy.orm.Session" and first party import "app.models.RunningWorkout"  (wrong-import-order)
+************* Module app.utils.auth
+app\utils\auth.py:60:0: C0304: Final newline missing (missing-final-newline)
+app\utils\auth.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app\utils\auth.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+app\utils\auth.py:38:0: C0116: Missing function or method docstring (missing-function-docstring)
+app\utils\auth.py:51:8: W0707: Consider explicitly re-raising using 'except JWTError as exc' and 'raise credentials_exception from exc' (raise-missing-from)
+app\utils\auth.py:59:0: C0116: Missing function or method docstring (missing-function-docstring)
+app\utils\auth.py:3:0: C0411: standard import "datetime.datetime" should be placed before third party imports "passlib.context.CryptContext", "jose.JWTError" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 8.83/10 (previous run: 8.83/10, +0.00)
+
